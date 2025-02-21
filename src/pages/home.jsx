@@ -46,7 +46,7 @@ const Home = () => {
         ))}
         
         {/* Blur effect */}
-        <div className="absolute inset-0 backdrop-blur-md bg-black bg-opacity-1"></div>
+        <div className="absolute inset-0 backdrop-blur-md backdrop-filter"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
           <motion.h1
@@ -72,7 +72,7 @@ const Home = () => {
           >
             <Link
               to="/places"
-              className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-lg shadow-lg"
+              className="mt-6 px-6 py-3 bg-blue-400 hover:bg-blue-700 text-white rounded-lg text-lg shadow-lg"
             >
               Explore Now
             </Link>

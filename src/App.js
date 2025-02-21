@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import Home from "./pages/home.jsx";
+import IndiaMap from "./pages/IndiaMap.jsx";
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
 // import NotFound from "./pages/NotFound";
@@ -17,6 +18,7 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/places" element={<IndiaMap />} />
             {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/contact" element={<Contact />} /> */}
             {/* <Route path="*" element={<NotFound />} /> */}
