@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-map/india": "^1.0.21",
     "cra-template": "1.2.0",
     "framer-motion": "^12.4.2",
     "leaflet": "^1.9.4",
