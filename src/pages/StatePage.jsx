@@ -15,9 +15,11 @@ const StatePage = () => {
     .join(" ");
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Welcome to {formattedStateName}</h1>
-      <p>More information about {formattedStateName} coming soon!</p>
+    <div className="min-h-[80vh] w-full flex flex-col items-center justify-center text-center py-20">
+      <h1 className="text-3xl font-bold">{`Welcome to ${formattedStateName}`}</h1>
+      <p className="text-lg text-gray-600 mt-2">
+        More information about {formattedStateName} coming soon!
+      </p>
     </div>
   );
 };
