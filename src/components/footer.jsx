@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="relative bottom-0 w-full py-6 px-8 transition-all duration-300 bg-white shadow-lg md:flex md:justify-between md:items-center">
+    <footer className="mt-auto w-full py-6 px-8 transition-all duration-300 bg-white shadow-lg md:flex md:justify-between md:items-center">
       {/* Logo on Right Side */}
       <div className="flex justify-center md:justify-end">
         <img src={logo} alt="Logo" className="h-12 w-auto" />

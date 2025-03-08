@@ -3,21 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@paosder/vector-map": "^1.1.1",
     "@react-map/india": "^1.0.21",
-    "cra-template": "1.2.0",
-    "framer-motion": "^12.4.2",
+    "cra-template": "^1.2.0",
+    "framer-motion": "^10.16.4",
     "leaflet": "^1.9.4",
-    "lucide-react": "^0.475.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-leaflet": "^5.0.0",
-    "react-router-dom": "^7.1.5",
-    "react-scripts": "^5.0.1",
-    "swiper": "^11.2.2"
+    "lucide-react": "^0.478.0",
+    "react": "^18.2.0",
+    "react-datamaps-india": "^0.6.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1",
+    "react-svgmap-india": "^2.1.0",
+    "swiper": "^11.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,15 +45,14 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.2",
-    "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.4.17",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.5",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "module"
+  "license": "ISC"
 }

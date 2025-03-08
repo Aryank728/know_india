@@ -1,50 +1,82 @@
-import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import IndiaMap from "react-svgmap-india";
+import "./IndiaMap.css"; // We'll create this CSS file
 
-const IndiaMap = () => {
-  const [geoData, setGeoData] = useState(null);
+const IndiaMapComponent = () => {
+  const [selectedState, setSelectedState] = useState("");
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("/states.geojson") // Adjust the path if necessary
-      .then((response) => response.json())
-      .then((data) => setGeoData(data))
-      .catch((error) => console.error("Error loading GeoJSON:", error));
-  }, []);
+  const states = {
+    'AN': 'Andaman and Nicobar Islands',
+    'AP': 'Andhra Pradesh',
+    'AR': 'Arunachal Pradesh',
+    'AS': 'Assam',
+    'BR': 'Bihar',
+    'CH': 'Chandigarh',
+    'CT': 'Chhattisgarh',
+    'DD': 'Dadra and Nagar Haveli',
+    'DL': 'Delhi',
+    'DN': 'Daman and Diu',
+    'GA': 'Goa',
+    'GJ': 'Gujarat',
+    'HP': 'Himachal Pradesh',
+    'HR': 'Haryana',
+    'JH': 'Jharkhand',
+    'JK': 'Jammu and Kashmir',
+    'KA': 'Karnataka',
+    'KL': 'Kerala',
+    'LA': 'Ladakh',
+    'LD': 'Lakshadweep',
+    'MH': 'Maharashtra',
+    'ML': 'Meghalaya',
+    'MN': 'Manipur',
+    'MP': 'Madhya Pradesh',
+    'MZ': 'Mizoram',
+    'NL': 'Nagaland',
+    'OR': 'Odisha',
+    'PB': 'Punjab',
+    'PY': 'Puducherry',
+    'RJ': 'Rajasthan',
+    'SK': 'Sikkim',
+    'TG': 'Telangana',
+    'TN': 'Tamil Nadu',
+    'TR': 'Tripura',
+    'UP': 'Uttar Pradesh',
+    'UT': 'Uttarakhand',
+    'WB': 'West Bengal'
+  };
 
-  const onEachState = (feature, layer) => {
-    layer.setStyle({
-      color: "black", // Black border
-      weight: 2,
-      fillColor: "lightgray",
-      fillOpacity: 0.7,
-    });
+  const handleClick = (stateCode) => {
+    const stateName = states[stateCode] || stateCode;
+    setSelectedState(stateName);
 
-    layer.on("mouseover", function () {
-      this.setStyle({
-        fillColor: "orange", // Highlight on hover
-        fillOpacity: 1,
-      });
-    });
-
-    layer.on("mouseout", function () {
-      this.setStyle({
-        fillColor: "lightgray",
-        fillOpacity: 0.7,
-      });
-    });
-
-    if (feature.properties && feature.properties.NAME_1) {
-      layer.bindTooltip(feature.properties.NAME_1); // Show state name
-    }
+    const stateUrl = stateName.toLowerCase().replace(/\s+/g, "-");
+    navigate(`/places/${stateUrl}`);
   };
 
   return (
-    <MapContainer center={[22, 80]} zoom={5} style={{ height: "100vh", width: "100%" }}>
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {geoData && <GeoJSON data={geoData} onEachFeature={onEachState} />}
-    </MapContainer>
+    <div className="py-8 px-4 mb-16 flex flex-col items-center">
+      <div className="w-full max-w-5xl mx-auto p-6 mb-20">
+        {selectedState && (
+          <div className="mb-4 p-3 bg-blue-50 rounded-md border border-blue-200 text-center">
+            <h3 className="text-xl font-semibold">{selectedState}</h3>
+          </div>
+        )}
+        
+        <div className="flex justify-end mt-10 -mr-96 items-center">
+          <IndiaMap
+            onClick={handleClick}
+            size="600px"  // Reduced size
+            mapColor="transparent"
+            strokeColor="#333333"
+            strokeWidth="0.5"
+            className="colorful-india-map"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default IndiaMap;
+export default IndiaMapComponent;

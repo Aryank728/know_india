@@ -1,0 +1,58 @@
+/* Base styles for the map */
+.colorful-india-map {
+  max-width: 100%;
+  height: auto;
+}
+
+.colorful-india-map path {
+  transition: all 0.3s ease;
+}
+
+/* State-specific colors */
+.colorful-india-map [id="AN"] { fill: #FF9AA2 !important; }
+.colorful-india-map [id="AP"] { fill: #FFB7B2 !important; }
+.colorful-india-map [id="AR"] { fill: #FFDAC1 !important; }
+.colorful-india-map [id="AS"] { fill: #E2F0CB !important; }
+.colorful-india-map [id="BR"] { fill: #B5EAD7 !important; }
+.colorful-india-map [id="CH"] { fill: #C7CEEA !important; }
+.colorful-india-map [id="CT"] { fill: #F0E6EF !important; }
+.colorful-india-map [id="DD"] { fill: #D4F0F0 !important; }
+.colorful-india-map [id="DL"] { fill: #FFC8DD !important; }
+.colorful-india-map [id="DN"] { fill: #BDE0FE !important; }
+.colorful-india-map [id="GA"] { fill: #A2D2FF !important; }
+.colorful-india-map [id="GJ"] { fill: #FFC09F !important; }
+.colorful-india-map [id="HP"] { fill: #FFEE93 !important; }
+.colorful-india-map [id="HR"] { fill: #FCF6BD !important; }
+.colorful-india-map [id="JH"] { fill: #D0F4DE !important; }
+.colorful-india-map [id="JK"] { fill: #A9DEF9 !important; }
+.colorful-india-map [id="KA"] { fill: #E4C1F9 !important; }
+.colorful-india-map [id="KL"] { fill: #FF99C8 !important; }
+.colorful-india-map [id="LA"] { fill: #D0D1FF !important; }
+.colorful-india-map [id="LD"] { fill: #ADE8F4 !important; }
+.colorful-india-map [id="MH"] { fill: #FFD166 !important; }
+.colorful-india-map [id="ML"] { fill: #06D6A0 !important; }
+.colorful-india-map [id="MN"] { fill: #118AB2 !important; }
+.colorful-india-map [id="MP"] { fill: #EF476F !important; }
+.colorful-india-map [id="MZ"] { fill: #073B4C !important; }
+.colorful-india-map [id="NL"] { fill: #F15BB5 !important; }
+.colorful-india-map [id="OR"] { fill: #9B5DE5 !important; }
+.colorful-india-map [id="PB"] { fill: #F8961E !important; }
+.colorful-india-map [id="PY"] { fill: #F9C74F !important; }
+.colorful-india-map [id="RJ"] { fill: #90BE6D !important; }
+.colorful-india-map [id="SK"] { fill: #43AA8B !important; }
+.colorful-india-map [id="TG"] { fill: #577590 !important; }
+.colorful-india-map [id="TN"] { fill: #F94144 !important; }
+.colorful-india-map [id="TR"] { fill: #F3722C !important; }
+.colorful-india-map [id="UP"] { fill: #F8961E !important; }
+.colorful-india-map [id="UT"] { fill: #F9C74F !important; }
+.colorful-india-map [id="WB"] { fill: #90BE6D !important; }
+
+/* Hover effect that preserves the original color */
+.colorful-india-map path:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+  stroke: #000000;
+  stroke-width: 2;
+  z-index: 10;
+  position: relative;
+} 

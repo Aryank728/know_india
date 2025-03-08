@@ -13,6 +13,15 @@ const Navbar = () => {
         setIsTransparent(location.pathname === "/");
     }, [location]);
 
+    // Navigation items with their paths
+    const navItems = [
+        { name: "Home", path: "/" },
+        { name: "Places", path: "/places" },
+        { name: "Test", path: "/test" },
+        { name: "About Us", path: "/aboutus" },
+        { name: "Contact Us", path: "/contactus" }
+    ];
+
     return (
         <nav className={`fixed top-0 left-0 w-full px-8 py-4 z-50 transition-all duration-300 ${isTransparent ? "bg-transparent" : "bg-white shadow-lg"}`}>
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -32,7 +41,7 @@ const Navbar = () => {
                 <div className="flex items-center ml-auto">
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8">
-                        {["Home", "About Us", "Contact Us"].map((item, index) => (
+                        {navItems.map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: -10 }}
@@ -40,10 +49,10 @@ const Navbar = () => {
                                 transition={{ delay: 0.2 * index, duration: 0.5 }}
                             >
                                 <Link
-                                    to={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}
+                                    to={item.path}
                                     className="relative text-gray-800 hover:text-blue-600 text-lg font-medium group"
                                 >
-                                    {item}
+                                    {item.name}
                                     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
                                 </Link>
                             </motion.div>
@@ -65,14 +74,14 @@ const Navbar = () => {
                     transition={{ duration: 0.3 }}
                     className="md:hidden flex flex-col space-y-4 mt-4 bg-white shadow-lg p-4 rounded-lg text-right"
                 >
-                    {["Home", "About Us", "Contact Us"].map((item, index) => (
+                    {navItems.map((item, index) => (
                         <Link
                             key={index}
-                            to={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}
+                            to={item.path}
                             className="text-gray-800 hover:text-blue-600 text-lg font-medium"
                             onClick={() => setIsOpen(false)}
                         >
-                            {item}
+                            {item.name}
                         </Link>
                     ))}
                 </motion.div>
