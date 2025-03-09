@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../Assets/DOC-20240518-WA0004.png";
+import logo from "../Assets/logo.png";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +21,6 @@ const Navbar = () => {
     const navItems = [
         { name: "Home", path: "/" },
         { name: "Places", path: "/places" },
-        { name: "Test", path: "/test" },
         { name: "About Us", path: "/aboutus" },
         { name: "Contact Us", path: "/contactus" }
     ];

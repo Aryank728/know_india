@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
-import logo from "../Assets/DOC-20240518-WA0004.png";
+import logo from "../Assets/logo.png";
 
 const quotes = [
   "Swaraj is my birthright, and I shall have it. - Bal Gangadhar Tilak",

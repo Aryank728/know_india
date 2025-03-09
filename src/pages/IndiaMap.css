@@ -56,3 +56,19 @@
   z-index: 10;
   position: relative;
 } 
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-background {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5);
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
+  min-height: 100vh; /* Ensure it covers the entire screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

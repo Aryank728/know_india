@@ -56,27 +56,27 @@ const IndiaMapComponent = () => {
   };
 
   return (
-    <div className="py-8 px-4 mb-16 flex flex-col items-center">
-      <div className="w-full max-w-5xl mx-auto p-6 mb-20">
-        {selectedState && (
-          <div className="mb-4 p-3 bg-blue-50 rounded-md border border-blue-200 text-center">
-            <h3 className="text-xl font-semibold">{selectedState}</h3>
+      <div className="gradient-background py-8 px-4 mb-5 flex flex-col items-center">
+        <div className="w-full max-w-5xl mx-auto p-6 mb-10">
+          {selectedState && (
+            <div className="mb-4 p-3 bg-blue-50 rounded-md border border-blue-200 text-center">
+              <h3 className="text-xl font-semibold">{selectedState}</h3>
+            </div>
+          )}
+          
+          <div className="flex justify-end mt-10 -mr-96 mb-0 items-center">
+            <IndiaMap
+              onClick={handleClick}
+              size="600px"
+              mapColor="transparent"
+              strokeColor="#333333"
+              strokeWidth="0.5"
+              className="colorful-india-map"
+            />
           </div>
-        )}
-        
-        <div className="flex justify-end mt-10 -mr-96 items-center">
-          <IndiaMap
-            onClick={handleClick}
-            size="600px"  // Reduced size
-            mapColor="transparent"
-            strokeColor="#333333"
-            strokeWidth="0.5"
-            className="colorful-india-map"
-          />
         </div>
       </div>
-    </div>
-  );
+    );    
 };
 
 export default IndiaMapComponent;
