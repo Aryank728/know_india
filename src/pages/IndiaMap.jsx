@@ -56,7 +56,7 @@ const IndiaMapComponent = () => {
   };
 
   return (
-      <div className="gradient-background py-8 px-4 mb-5 flex flex-col items-center">
+      <div className="gradient-background py-8 px-4 flex flex-col items-center">
         <div className="w-full max-w-5xl mx-auto p-6 mb-10">
           {selectedState && (
             <div className="mb-4 p-3 bg-blue-50 rounded-md border border-blue-200 text-center">
@@ -64,7 +64,7 @@ const IndiaMapComponent = () => {
             </div>
           )}
           
-          <div className="flex justify-end mt-10 -mr-96 mb-0 items-center">
+          <div className="flex justify-end mt-10 items-center">
             <IndiaMap
               onClick={handleClick}
               size="600px"

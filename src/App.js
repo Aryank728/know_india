@@ -15,7 +15,7 @@ function App() {
         <Navbar />
 
         {/* Page Content */}
-        <main className="flex-grow pb-16">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/places" element={<IndiaMapPage />} />
