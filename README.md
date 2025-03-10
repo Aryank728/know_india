@@ -1,5 +1,12 @@
 # ✨ Know India: A Journey ✨
 
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)](https://mui.com/)
+[![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)](https://leafletjs.com/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-3DA639?style=for-the-badge&logo=open-source-initiative&logoColor=white)](https://opensource.org/)
+
 ## 🌟 Discover the Magic of India 🌟
 
 _Wander through wonders, explore with delight,_  
@@ -23,7 +30,7 @@ _Just a few commands will do the trick!_
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/know-india.git
+git clone https://github.com/Aryank728/know-india.git
 
 # Navigate to project directory
 cd know-india
@@ -51,6 +58,9 @@ _With Tailwind CSS to make it all gleam!_
 - 🔥 Supabase - Backend & Database
 - 📊 Dashboard - Admin controls
 - 🔒 Authentication/Authorization - Secure access
+- 🗺️ Leaflet & React-Leaflet - Interactive maps
+- 🎭 Framer Motion - Animations
+- 🧩 Material UI - Component library
 
 ---
 
@@ -82,10 +92,42 @@ _The wonders of India, from A to Z!_
 
 ---
 
+### 👥 Contributing 👥
+
+_Join our journey, add your unique touch,_  
+_Every contribution matters so much!_
+
+We welcome contributions from developers, historians, travel enthusiasts, and anyone passionate about India! Here's how you can contribute:
+
+#### 🧑‍💻 For Developers
+- **Frontend Development**: Enhance UI/UX, add animations, improve responsiveness
+- **Map Features**: Implement new interactive map features
+- **Performance Optimization**: Help make the application faster and more efficient
+- **Bug Fixes**: Help identify and fix issues
+
+#### 📚 For Content Contributors
+- **Historical Information**: Add or improve historical content about locations
+- **Cultural Insights**: Share cultural knowledge about different regions
+- **Hidden Gems**: Suggest lesser-known places to include
+- **Translations**: Help translate content to different Indian languages
+
+#### 🛠️ How to Contribute
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Check our [issues page](https://github.com/Aryank728/know-india/issues) for tasks labeled as "good first issue" if you're new to the project!
+
+---
+
 ### 📝 License 📝
 
 _Share and enjoy, spread knowledge with glee,_  
 _Under MIT license, open and free!_
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
