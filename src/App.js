@@ -7,6 +7,7 @@ import StatePage from "./pages/StatePage.jsx"; // Component for individual state
 import AboutUs from "./pages/AboutUs.jsx"; // Import About Us page
 import ContactUs from "./pages/ContactUs.jsx"; // Import Contact Us page
 import Constitution from "./pages/constitution.jsx"; // Import Constitution page
+import TestKnowIndia from "./pages/TestKnowIndia.jsx"; // Import test component
 import { ThemeProvider } from "./context/ThemeContext.jsx"; // Import ThemeProvider
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="/constitution" element={<Constitution />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/contactus" element={<ContactUs />} />
+              <Route path="/test-knowindia" element={<TestKnowIndia />} />
             </Routes>
           </main>
 
